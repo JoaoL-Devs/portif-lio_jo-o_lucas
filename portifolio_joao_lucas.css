@@ -7,18 +7,20 @@
 body {
     background-color: black;
     color: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
 }
 
-/* NAVBAR */
+/* NAVBAR barra */
 nav {
     background: rgb(0, 0, 0);
     color: white;
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
+    align-items: center;
+    gap: 2.2rem;
+    padding: 20px 40px;
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     right: 0;
     z-index: 100;
@@ -27,7 +29,6 @@ nav {
 nav a {
     color: #fff;
     position: relative;
-    margin-left: 50px;
     text-decoration: none;
 }
 
@@ -49,7 +50,56 @@ nav a:hover::after {
     transform: translateY(0);
 }
 
-/* HEADER */
+
+
+.typing-line {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1.5px solid transparent; /* Cursor mais fino */
+    width: 0;
+    max-width: max-content;
+    margin: 0 auto;
+    font-size: 16px; /* Ajuste aqui o tamanho do texto (padrão costuma ser 18px~20px) */
+    line-height: 1.2; /* Ajuste aqui para diminuir a altura vertical do cursor */
+}
+
+/* Primeira linha: digita do 0s ao 3s */
+.line-1 {
+    animation: 
+        typing 4s steps(22, end) forwards,
+        blink-line1 0.75s step-end forwards;
+}
+
+/* Segunda linha: espera 3.5s de delay, depois digita em 3.5s */
+.line-2 {
+    animation: 
+        typing 2.5s steps(20, end) 1s forwards,
+        blink-line2 0.75s step-end 2.5s infinite;
+}
+
+/* Animação que revela o texto */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Pisca o cursor na linha 1 e depois apaga quando a linha 2 começa */
+@keyframes blink-line1 {
+    0%, 85% { border-color: #fff; }
+    42% { border-color: transparent; }
+    100% { border-color: transparent; }
+}
+
+/* Pisca o cursor na linha 2 continuamente */
+@keyframes blink-line2 {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+
+
+/* HEADER foto de fundo*/
 header {
     background-image: url("https://images.unsplash.com/photo-1605379399843-5870eea9b74e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80");
     background-size: cover;
@@ -59,10 +109,10 @@ header {
     flex-direction: column;
     color: #fff;
     background-position: center center;
-    height: 60vh;
+    height: 65vh;
     position: relative;
+    padding-top: 90px;
 }
-
 header::after {
     content: '';
     background-color: black;
@@ -75,15 +125,26 @@ header::after {
     z-index: 1;
 }
 
-header h1,
-header p {
+header h1, 
+header p{
     position: relative;
     z-index: 2;
 }
 
+header #redes-sociais {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    margin-top: 0; 
+}
+
+
+
+
+
 header h1 {
     font-size: 80px;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
     margin-top: 0;
 }
 
@@ -267,7 +328,7 @@ section h2::after {
     transform: scaleX(1);
 }
 
-/* REDES SOCIAIS 
+/* REDES SOCIAIS */ 
 .redes-links {
     display: flex;
     justify-content: center;
