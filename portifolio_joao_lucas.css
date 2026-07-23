@@ -181,6 +181,19 @@ section h2::after {
     background-color: #fff;
 }
 
+
+
+
+#sobre-mim a {
+    color: #8a2be2;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#sobre-mim a:hover {
+    color: #a855f7;
+}
 /*cloud*/
 
 /* RESUMO PROFISSIONAL */
