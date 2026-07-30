@@ -151,10 +151,32 @@ header h1 {
 header p {
     font-size: 20px;
     text-align: center;
-
+    
     /*cloud*/
 }
 
+/* REDES SOCIAIS */ 
+.redes-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.redes-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.redes-links a:hover {
+    background-color: #fff;
+    color: #000;
+}
 /* SECTIONS (Resumo, Projetos, Redes Sociais) */
 section {
     padding: 100px 2rem 4rem;
@@ -196,6 +218,9 @@ section h2::after {
 }
 /*cloud*/
 
+
+
+
 /* RESUMO PROFISSIONAL */
 #resumo-profissional,#sobre-mim p {
     max-width: 700px;
@@ -204,9 +229,6 @@ section h2::after {
     color: #ccc;
     line-height: 1.8;
 }
-
-
-
 
 
 
@@ -301,6 +323,17 @@ section h2::after {
     background-color: #1a1a1a;
 }
 
+.tech-tags{
+    color: #8a2be2;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.tech-tags a:hover {
+    color: #8a2be2;
+}
+
 
 
 /* PROJETOS */
@@ -335,6 +368,14 @@ section h2::after {
 .projeto-links {
     padding: 0 1.2rem;
 }
+.projeto-card a{
+    color: #8a2be2;
+
+}
+.projeto-card a:hover {
+    color: #8a2ce2;
+}
+
 
 .projeto-card h3 {
     margin-top: 1rem;
@@ -345,6 +386,8 @@ section h2::after {
     font-size: 0.95rem;
     margin: 0.5rem 0;
 }
+
+
 
 .projeto-links {
     display: flex;
@@ -366,7 +409,7 @@ section h2::after {
     bottom: -2px;
     width: 100%;
     height: 1px;
-    background-color: #fff;
+    background-color:  #8a2ce2;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -376,28 +419,6 @@ section h2::after {
     transform: scaleX(1);
 }
 
-/* REDES SOCIAIS */ 
-.redes-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.redes-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border: 1px solid #fff;
-    padding: 0.6rem 1.4rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.redes-links a:hover {
-    background-color: #fff;
-    color: #000;
-}
 
 /* FOOTER */
 footer {
